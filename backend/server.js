@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.send("CRM Backend Running");
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.post("/api/tickets", (req, res) => {
   const {
